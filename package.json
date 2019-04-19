@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MyClass.js",
+  "scripts": {
+    "start:dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "angular": "^1.6.5",
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "lodash": "~4.17.4",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "express": "~4.7.2",
+    "mongoose": "~3.6.2",
+    "morgan": "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

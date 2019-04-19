@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="module" src="app.js" >
+
+</script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<body>
+<div ng-app="myApp">
+  <div ng-controller="myCtrl">
+      <h1>Hello {{firstName}}</h1>
+      <div ng-repeat="employee in employeeLists">
+           <employee emp="employee" call="call(name)" ></div>
+       </div>
+  </div>
+</div>
+
+</body>
+</html>

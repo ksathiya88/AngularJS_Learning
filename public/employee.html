@@ -1,0 +1,6 @@
+<div class="employee_class"><p>
+<label>Employee</label>
+<input ng-model="employee.name" ng-click="call({name:employee.name})"></input></p>
+<p><label>DOJ </label>{{employee.date_of_birth | date :  "dd.MM.y" }}</p>
+<p><label>Position Held </label>{{employee.position_held | uppercase | decorate:"-"}}
+</div>
