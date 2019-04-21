@@ -7,6 +7,7 @@
     "start:dev": "webpack-dev-server"
   },
   "dependencies": {
+    "angular": "^1.7.5",
     "angularjs": "0.0.1",
     "body-parser": "~1.5.2",
     "express": "~4.7.2",

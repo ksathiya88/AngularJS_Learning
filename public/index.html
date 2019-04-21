@@ -8,9 +8,8 @@
 <body>
 <div ng-app="myApp">
   <div ng-controller="myCtrl">
-  	<button ng-click="alert()">OK</button>
     <div ng-repeat="employee in employeeList"> 
-     	<employee-directive emp="employee"/>
+     	<employee-directive emp="employee" getEmployees="getEmployees('employee controller')" get-employees="getEmployees()"/>
     </div>
   </div>
 </div>

@@ -1,3 +1,4 @@
+//import * as angular from "angular";
 import {
   serviceName,
   httpService
@@ -23,4 +24,4 @@ app.controller(mainControllerName, controller);
 app.filter(decorateFilterName, decorateFunction);
 app.service(serviceName, httpService);
 app.controller(controllerName, employeeController);
-app.directive("employeeDirective",employeeDirective);
+app.directive(directiveName,employeeDirective);

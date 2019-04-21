@@ -5,19 +5,17 @@ export  function employeeDirective() {
     restrict: 'E',
     scope: {
       employee: '=emp',
-      employeeList: '=',
-      call: '&',
-      alert: '='
+      getEmployees:'&'
     },
     controller: "employeeController",
     templateUrl:'./employee/employee.html',
     compile: function compile(tElement, tAttributes, transcludeFn) {
-      console.log("compile element", tElement);
+      // console.log("compile element", tElement);
       tElement.css('padding', '6px');
       return {
         post: function($scope, element, attrs) {
           //console.log("link value", deleteItem);
-          console.log("link element", element, $scope);
+          // console.log("link element", element, $scope);
           //element.bind('click', function () {
           //    element.html('You clicked the employee: '
           //        + $scope.employee.name);

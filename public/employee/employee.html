@@ -3,5 +3,6 @@
 <label>Employee</label>
 <input ng-model="employee.name" ng-click="call({name:employee.name})"></input></p>
 <p><label>DOJ </label>{{employee.date_of_birth | date :  "dd.MM.y" }}</p>
-<p><label>Position Held </label>{{employee.position_held | uppercase | decorate:"-"}}
+<p><label>Position Held </label>{{employee.position_held | uppercase | decorate:"-"}}</p>
+<input type="button" value="Delete" ng-click="deleteEmployee(employee.key)">
 </div>

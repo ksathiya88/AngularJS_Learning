@@ -57,12 +57,19 @@ const employees= [
 
     
    app.get('/getEmployees', function(req, res){
+      console.log("employees",employees);
       res.send(employees);
     }); 
 
    app.delete('/deleteEmployee',function(req,res){
-      console.log("delete Employee");         
-      console.log("id value",req.params.id);
+      console.log("delete employees",employees);
+      var employee = employees.find((employee)=>{
+          return employee.key==req.query.key;
+      });
+      employees.splice(employees.indexOf(employee),1);
+      res.send(employees);         
+      //console.log("employee",employee);
+      //console.log("id value",req.query);
    }) 
 
     app.get('*', function(req, res) {
