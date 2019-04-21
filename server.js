@@ -9,6 +9,45 @@
     // configuration =================
 
 
+const employees= [
+    {
+      "key": 1,
+      "name": "ABC",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    },
+    {
+      "key": 2,
+      "name": "John",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    },
+    {
+      "key": 3,
+      "name": "Michael",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    },
+    {
+      "key": 4,
+      "name": "Michael",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    },
+    {
+      "key": 5,
+      "name": "Michael",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    },
+    {
+      "key": 6,
+      "name": "Michael",
+      "date_of_birth": "10/10/2010",
+      "position_held": "Manager"
+    }
+  ];
+
     app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
@@ -16,6 +55,15 @@
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
 
+    
+   app.get('/getEmployees', function(req, res){
+      res.send(employees);
+    }); 
+
+   app.delete('/deleteEmployee',function(req,res){
+      console.log("delete Employee");         
+      console.log("id value",req.params.id);
+   }) 
 
     app.get('*', function(req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
