@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.js"></script>
 <script type="module" src="app.js">
 
 </script>
@@ -8,9 +10,10 @@
 <body>
 <div ng-app="myApp">
   <div ng-controller="myCtrl">
-    <div ng-repeat="employee in employeeList"> 
-     	<employee-directive emp="employee" getEmployees="getEmployees('employee controller')" get-employees="getEmployees()"/>
-    </div>
+   <a ui-sref="listEmployees" ui-sref-active="active">list Employees</a>
+   <a ui-sref="addEmployees" ui-sref-active="active">add Employees</a>
+
+    <ui-view></ui-view>
   </div>
 </div>
 </body>
