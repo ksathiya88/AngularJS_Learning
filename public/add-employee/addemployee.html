@@ -1,7 +1,12 @@
-
-<div>
-<label>Employee</label>
-<input ng-model="employee.name"></input></p>
-<p><label>DOJ </label><input ng-model="employee.doj"></input></p>
-<p><label>Position Held </label><input ng-model="employee.position_held"></input></p>
+<div></div>
+<div style="font-weight: bold;font-size: large;">Add Employee</div>
+<div></div>
+<div></div>
+<div></div>
+<div class="employee_class"><p>
+	<label>Employee</label>
+	<input ng-model="$ctrl.name"></input></p>
+	<p><label>DOJ </label><input ng-model="$ctrl.date_of_birth"></input></p>
+	<p><label>Position Held </label><input ng-model="$ctrl.position_held"></input></p>
+    <button ng-click="$ctrl.add()">Add</button>
 </div>

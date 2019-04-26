@@ -70,7 +70,18 @@ const employees= [
       res.send(employees);         
       //console.log("employee",employee);
       //console.log("id value",req.query);
-   }) 
+   })
+
+   app.put('/addEmployee',function(req,res){
+     console.log("add employees",req.body);
+
+     let employee = req.body;
+     employees.push(employee);
+     console.log(employee,employee.name);
+     res.send("Saved the data");
+
+   });
+
 
     app.get('*', function(req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
