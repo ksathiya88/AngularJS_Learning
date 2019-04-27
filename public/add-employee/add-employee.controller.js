@@ -1,9 +1,6 @@
 export const addControllerName = "addEmployeeController";
 
 export function addEmployeeController($http) {
-	this.name = "ABC";
-	this.date_of_birth = "10/10/2010";
-	this.position_held = "Manager";
 
 	this.add = function() {
 

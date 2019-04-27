@@ -10,9 +10,8 @@
 <body>
 <div ng-app="myApp">
   <div ng-controller="myCtrl">
-   <a ui-sref="listEmployees" ui-sref-active="active">list Employees</a>
-   <a ui-sref="addEmployees" ui-sref-active="active">add Employees</a>
-
+   <a ui-sref="listEmployees" ui-sref-active="active" style="padding:10px"><button type="button">List Employees</button></a>
+   <a ui-sref="addEmployees" ui-sref-active="active" style="padding:10px"><button type="button">Add Employees</button></a>
     <ui-view></ui-view>
   </div>
 </div>
