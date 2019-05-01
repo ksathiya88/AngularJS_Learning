@@ -30,6 +30,25 @@ import {
   listController
 } from './list-employee/list-employee.controller.js';
 
+import {
+loginControllerName,
+loginController
+} from './login/login.controller.js';
+
+import {
+loginComponentName,
+loginComponent
+} from './login/login.component.js';
+
+import {
+homeControllerName,
+homeController
+} from './home/home.controller.js';
+
+import {
+homeComponentName,
+homeComponent
+} from './home/home.component.js';
 
 import {
   decorateFilterName,
@@ -41,8 +60,16 @@ import {
 
 var app = angular.module('myApp', ["ui.router"]);
 app.config(function($stateProvider) {
+  var home = { 
+    //abstract:true,
+    name:"home",
+    url: '/home',
+    templateUrl: './home/home.html',
+    controller:homeControllerName
+  };
+
   var listEmployees = {
-    name: 'listEmployees',
+    name:"listEmployees",
     url: '/listEmployees',
     component: listEmployeeComponentName
   };
@@ -53,8 +80,18 @@ app.config(function($stateProvider) {
     component: addDirectiveName
   };
 
-  $stateProvider.state(listEmployees);
-  $stateProvider.state(addEmployees);
+  var login = { 
+    name: 'login',
+    url: '/login',
+    component: loginComponentName
+  };
+
+  
+
+  $stateProvider.state(login);
+  $stateProvider.state('home',home);
+  $stateProvider.state("home.listEmployees",listEmployees);
+  $stateProvider.state("home.addEmployees",addEmployees);
 
 });
 app.controller(mainControllerName, controller);
@@ -66,3 +103,7 @@ app.controller(addControllerName, addEmployeeController);
 app.component(addDirectiveName,addEmployeeDirective);
 app.controller(listEmployeeControllerName, listController);
 app.component(listEmployeeComponentName,listEmployeeComponent);
+app.controller(loginControllerName, loginController);
+app.component(loginComponentName,loginComponent);
+app.controller(homeControllerName, homeController);
+app.component(homeComponentName,homeComponent);
