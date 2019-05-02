@@ -61,6 +61,16 @@ const employees= [
       res.send(employees);
     }); 
 
+   app.put('/authenticate',function(req,res){
+      console.log("authenticate request",req.body);
+      var cred = req.body;
+      if (cred.username=="abc" && cred.password=="pass") {
+          res.send("User authenticated"); 
+      }else {
+            res.status(401).send('Not a User');
+      }
+   });
+
    app.delete('/deleteEmployee',function(req,res){
       console.log("delete employees",employees);
       var employee = employees.find((employee)=>{

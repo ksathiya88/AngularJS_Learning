@@ -7,9 +7,10 @@
 	<br>
 	<div>
 		<label>Password:</label>
-		<input type="text" ng-model="$ctrl.password">
+		<input type="password" ng-model="$ctrl.password">
 	</div>
 	<div>
 		<input type="button" value="Submit" ng-click="$ctrl.submit()">
 	</div>
+	<label ng-if="$ctrl.error" style="color:red">Authentication Failed</label>
 </div>

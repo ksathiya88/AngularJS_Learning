@@ -61,11 +61,10 @@ import {
 var app = angular.module('myApp', ["ui.router"]);
 app.config(function($stateProvider) {
   var home = { 
-    //abstract:true,
+    abstract:true,
     name:"home",
     url: '/home',
-    templateUrl: './home/home.html',
-    controller:homeControllerName
+    component:homeComponentName
   };
 
   var listEmployees = {
