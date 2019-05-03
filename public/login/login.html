@@ -13,5 +13,7 @@
 	<div>
 		<input class="btn btn-primary" type="button" value="Submit" ng-click="$ctrl.submit()">
 	</div>
-	<label ng-if="$ctrl.error" style="color:red">Authentication Failed</label>
+	<div ng-if="$ctrl.error" class="alert alert-danger">
+		<strong>Authentication Failed !</strong>
+	</div>
 </div>
