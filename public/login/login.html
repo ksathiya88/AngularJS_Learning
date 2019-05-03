@@ -1,4 +1,4 @@
-<div class="employee_class">
+<div class="login_class">
 	<div>
 		<label>UserName:</label>
 		
@@ -9,8 +9,9 @@
 		<label>Password:</label>
 		<input type="password" ng-model="$ctrl.password">
 	</div>
+	<div style="height:3px"></div>
 	<div>
-		<input type="button" value="Submit" ng-click="$ctrl.submit()">
+		<input class="btn btn-primary" type="button" value="Submit" ng-click="$ctrl.submit()">
 	</div>
 	<label ng-if="$ctrl.error" style="color:red">Authentication Failed</label>
 </div>

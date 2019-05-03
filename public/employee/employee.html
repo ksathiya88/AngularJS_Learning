@@ -1,8 +1,8 @@
 
-<div class="employee_class"><p>
+<div class="emp_class"><p>
 <label>Employee</label>
 <input ng-model="$ctrl.employee.name" ng-click="call({name:employee.name})"></input></p>
 <p><label>DOJ </label>{{$ctrl.employee.date_of_birth | date :  "dd.MM.y" }}</p>
 <p><label>Position Held </label>{{$ctrl.employee.position_held | uppercase | decorate:"-"}}</p>
-<input type="button" value="Delete" ng-click="$ctrl.deleteEmployee($ctrl.employee.key)">
+<input type="button" class="btn btn-info" value="Delete" ng-click="$ctrl.deleteEmployee($ctrl.employee.key)">
 </div>

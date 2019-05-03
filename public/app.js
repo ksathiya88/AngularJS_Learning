@@ -69,7 +69,7 @@ app.config(function($stateProvider) {
 
   var listEmployees = {
     name:"listEmployees",
-    url: '/listEmployees',
+    url: '/',
     component: listEmployeeComponentName
   };
 

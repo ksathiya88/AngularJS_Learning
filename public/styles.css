@@ -1,4 +1,19 @@
 .employee_class{
   padding:10px;
   border:1px green solid;
+  width:50%;
+  margin:auto;
+}
+
+.emp_class{
+  padding:10px;
+  border:1px green solid;
+}
+
+
+.login_class {
+	border:1px green solid;
+	margin: auto;
+	width:30%;
+	padding:75px;
 }
